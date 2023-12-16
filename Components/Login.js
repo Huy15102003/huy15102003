@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, TextInput, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
 import { useNavigation } from '@react-navigation/native';
-
+import { FontAwesome } from '@expo/vector-icons';
 const Login = ({ handleLogin }) => {
   const navigation = useNavigation();
   const [email, setEmail] = useState("");
@@ -15,7 +15,10 @@ const Login = ({ handleLogin }) => {
 
   return (
     <View style={styles.container}>
-      <Image source={{ uri: "https://banner2.cleanpng.com/20181110/srt/kisspng-computer-icons-login-scalable-vector-graphics-emai-5be7376911c6b4.4735764415418796570728.jpg" }} style={styles.logo} />
+      <View style={styles.logo}>
+      <FontAwesome name="user-circle-o" size={200} color="blue"  />
+      </View>
+
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -53,6 +56,8 @@ const styles = StyleSheet.create({
     height: 200,
     marginBottom: 24,
     borderRadius: 100,
+    alignItems:"center",
+    justifyContent:"center"
   },
   input: {
     width: 300,
