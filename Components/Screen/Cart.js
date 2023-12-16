@@ -134,7 +134,7 @@ const Cart = () => {
                         <View style={styles.sizeprice}>
                             <View style={styles.size}>
                                 <Text style={styles.sizetext}>
-                                    M
+                                    L
                                 </Text>
                             </View>
                             <View style={styles.price}>
