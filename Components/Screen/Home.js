@@ -276,7 +276,7 @@ const Home = () => {
                                 <View style={styles.name_price}>
                                     <View style={styles.name}>
                                         <Text style={styles.nameup}>
-                                            Cappuccino
+                                            Liberica
                                         </Text>
                                         <Text style={styles.namedown}>
                                             With Steamed Milk
@@ -352,7 +352,7 @@ const Home = () => {
                                 <View style={styles.name_price}>
                                     <View style={styles.name}>
                                         <Text style={styles.nameup}>
-                                            Cappuccino
+                                            Liberica
                                         </Text>
                                         <Text style={styles.namedown}>
                                             With Steamed Milk
@@ -445,6 +445,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         marginHorizontal: 20,
         marginTop: 30,
+        marginBottom:10,
         backgroundColor: '#141921',
         height: 50,
         alignItems: "center", borderRadius: 15

@@ -9,6 +9,7 @@ import Register from './Components/Register';
 import Forgot from './Components/Forgot';
 import NavTOP from './Components/Home/NavTOP';
 import Favorites from './Components/Screen/Favorites';
+import Notification from './Components/Screen/Notification';
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
         <Stack.Screen name="Favorites" component={Favorites} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
         <Stack.Screen name="Cart" component={Cart} options={{ headerShown: false }} />
+        <Stack.Screen name="Notification" component={Notification} options={{ headerShown: false }} />
         <Stack.Screen name="NavTOP" component={NavTOP} options={{ headerShown: false }} />
         <Stack.Screen name="Register" component={Register} options={{ headerShown: false }} />
         <Stack.Screen name="Forgot" component={Forgot} options={{ headerShown: false }} />
