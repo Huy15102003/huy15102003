@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import Home from './Components/Screen/Home';
+import Home from './Components/Screen/Home1';
 import NavBOT from './Components/Home/NavBOT';
 import Login from './Components/Login';
 import Cart from './Components/Screen/Cart';
