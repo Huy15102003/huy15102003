@@ -8,16 +8,16 @@ import Cart from './Components/Screen/Cart';
 import Register from './Components/Register';
 import Forgot from './Components/Forgot';
 import NavTOP from './Components/Home/NavTOP';
-
+import Favorites from './Components/Screen/Favorites';
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
-
       <Stack.Screen name="NavBOT" component={NavBOT} options={{ headerShown: false }} />
+        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+        <Stack.Screen name="Favorites" component={Favorites} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
         <Stack.Screen name="Cart" component={Cart} options={{ headerShown: false }} />
         <Stack.Screen name="NavTOP" component={NavTOP} options={{ headerShown: false }} />

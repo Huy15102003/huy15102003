@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Text, View, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
 import NavTOP from "../Home/NavTOP";
 const Cart = () => {
+    const pagename = "Cart";
     const [products, setProducts] = useState([
         { id: 1, name: "Product 1", quantity: 0 },
     ]);
@@ -30,7 +31,7 @@ const Cart = () => {
     return (
         <View style={styles.container}>
             <View style={styles.navtop}>
-                <NavTOP />
+            <NavTOP pagename={pagename} />
             </View>
             <ScrollView>
                 <View style={styles.content}>

@@ -5,6 +5,7 @@ import Home from '../Screen/Home';
 import Login from '../Login';
 import Cart from '../Screen/Cart';
 import NavTOP from './NavTOP';
+import Favorites from '../Screen/Favorites';
 
 const Tab = createBottomTabNavigator();
 
@@ -40,7 +41,7 @@ const NavBOT = () => {
     <Tab.Navigator screenOptions={screenOptions}>
       <Tab.Screen name="Trang chủ" component={Home} options={{ headerShown: false }} />
       <Tab.Screen name="Giỏ hàng" component={Cart} options={{ headerShown: false }} />
-      <Tab.Screen name="Yêu thích" component={Home} options={{ headerShown: false }} />
+      <Tab.Screen name="Yêu thích" component={Favorites} options={{ headerShown: false }} />
       <Tab.Screen name="Thông báo" component={NavTOP} options={{ headerShown: false }} />
     </Tab.Navigator>
   );

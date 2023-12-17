@@ -2,9 +2,8 @@ import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity, Alert, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons, Entypo } from '@expo/vector-icons';
-const NavTOP = () => {
+const NavTOP = ({ pagename }) => {
     const navigation = useNavigation();
-    const myName = "Cart";
     const handleClick = () => {
         Alert.alert('Chưa làm');
     }
@@ -16,7 +15,7 @@ const NavTOP = () => {
                 </View>
             </TouchableOpacity>
             <View style={styles.title}>
-                <Text style={styles.pageTitle}>{myName}</Text>
+            <Text style={styles.pagenameText}>{pagename}</Text>
             </View>
             <TouchableOpacity onPress={handleClick} style={styles.buttonoption}>
                 <View style={styles.option}>
@@ -58,6 +57,11 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         borderRadius: 10
+    },
+    pagenameText:{
+        color:'white',
+        fontSize:25,
+        fontWeight:"bold"
     }
 })
 export default NavTOP;
