@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 
 const Forgot = () => {
   const [email, setEmail] = useState('');
@@ -16,8 +16,10 @@ const Forgot = () => {
   };
 
   const handleResetPassword = () => {
-    if(verificationCode == 1234)
-    console.log('Yêu cầu đặt lại mật khẩu thành công');
+    if(verificationCode == 1234){
+      Alert.alert("Đến đây thôi");
+    }
+    else Alert.alert("Mã xác nhận không hợp lệ");
   };
 
   const handleSendCode = () => {

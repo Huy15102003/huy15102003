@@ -4,6 +4,7 @@ import { FontAwesome5, Feather, Ionicons, Entypo, AntDesign } from 'react-native
 import Home from '../Screen/Home';
 import Login from '../Login';
 import Cart from '../Screen/Cart';
+import NavTOP from './NavTOP';
 
 const Tab = createBottomTabNavigator();
 
@@ -40,7 +41,7 @@ const NavBOT = () => {
       <Tab.Screen name="Trang chủ" component={Home} options={{ headerShown: false }} />
       <Tab.Screen name="Giỏ hàng" component={Cart} options={{ headerShown: false }} />
       <Tab.Screen name="Yêu thích" component={Home} options={{ headerShown: false }} />
-      <Tab.Screen name="Thông báo" component={Login} options={{ headerShown: false }} />
+      <Tab.Screen name="Thông báo" component={NavTOP} options={{ headerShown: false }} />
     </Tab.Navigator>
   );
 };

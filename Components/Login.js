@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, TextInput, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
+import { View, TextInput, TouchableOpacity, Text, StyleSheet, Image, Alert } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { FontAwesome } from '@expo/vector-icons';
 
@@ -10,8 +10,10 @@ const Login = ({ handleLogin }) => {
 
   const handleSubmit = () => {
     if (email === 'admin' && password === '123') {
-      navigation.navigate('Home');
+      Alert.alert('Đăng nhập thành công')
+      navigation.navigate('NavBOT');
     }
+    else Alert.alert('Sai email khoặc mật khẩu')
   };
 
   const handleForget = () => {
