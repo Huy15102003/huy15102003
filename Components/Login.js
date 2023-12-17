@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { View, TextInput, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
+import { View, TextInput, TouchableOpacity, Text, StyleSheet, Image, Alert } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { FontAwesome } from '@expo/vector-icons';
+
 const Login = ({ handleLogin }) => {
   const navigation = useNavigation();
   const [email, setEmail] = useState("");
@@ -9,16 +10,23 @@ const Login = ({ handleLogin }) => {
 
   const handleSubmit = () => {
     if (email === 'admin' && password === '123') {
-      navigation.navigate('Home');
+      Alert.alert('Đăng nhập thành công')
+      navigation.navigate('NavBOT');
     }
+    else Alert.alert('Sai email khoặc mật khẩu')
   };
+
+  const handleForget = () => {
+    navigation.navigate('Forgot');
+  };
+
+  const handleRegister = () =>{
+    navigation.navigate('Register');
+  }
 
   return (
     <View style={styles.container}>
-      <View style={styles.logo}>
-      <FontAwesome name="user-circle-o" size={200} color="blue"  />
-      </View>
-
+      <FontAwesome name="user-circle-o" size={200} color="#4267B2" style={styles.logo} />
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -37,8 +45,11 @@ const Login = ({ handleLogin }) => {
       <TouchableOpacity style={styles.loginButton} onPress={handleSubmit}>
         <Text style={styles.loginButtonText}>Đăng nhập</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.forgotPasswordButton}>
+      <TouchableOpacity style={styles.forgotPasswordButton} onPress={handleForget}>
         <Text style={styles.forgotPasswordButtonText}>Quên mật khẩu?</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.forgotPasswordButton} onPress={handleRegister}>
+        <Text style={styles.forgotPasswordButtonText}>Chưa có tài khoản?</Text>
       </TouchableOpacity>
     </View>
   );
@@ -77,7 +88,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 4,
-    marginBottom: 12,
+    marginBottom: 20,
   },
   loginButtonText: {
     fontSize: 16,
@@ -85,7 +96,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   forgotPasswordButton: {
-    marginBottom: 12,
+    marginBottom: 18,
   },
   forgotPasswordButtonText: {
     fontSize: 16,
