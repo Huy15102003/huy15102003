@@ -5,6 +5,7 @@ import Home from './Components/Screen/Home';
 import NavBOT from './Components/Home/NavBOT';
 import Login from './Components/Login';
 import Cart from './Components/Screen/Cart';
+import NavTOP from './Components/Home/NavTOP';
 
 const Stack = createStackNavigator();
 
@@ -14,6 +15,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="NavBOT" component={NavBOT} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+        <Stack.Screen name="NavTOP" component={NavTOP} options={{ headerShown: false }} />
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>

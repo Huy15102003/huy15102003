@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Text, View, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
-
+import NavTOP from "../Home/NavTOP";
 const Cart = () => {
     const [products, setProducts] = useState([
         { id: 1, name: "Product 1", quantity: 0 },
@@ -29,6 +29,9 @@ const Cart = () => {
     };
     return (
         <View style={styles.container}>
+            <View style={styles.navtop}>
+                <NavTOP />
+            </View>
             <ScrollView>
                 <View style={styles.content}>
                     <View style={styles.infor}>
@@ -247,7 +250,7 @@ const Cart = () => {
                             <Text style={styles.moreinfor}>
                                 From Africa
                             </Text>
-                            <View style={[styles.sizeprice,styles.sizepricedetail]}>
+                            <View style={[styles.sizeprice, styles.sizepricedetail]}>
                                 <View style={styles.size}>
                                     <Text style={styles.sizename}>
                                         250gm
@@ -466,7 +469,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#0C0F14',
-
+    },
+    navtop: {
+        height: 50,
+        marginTop:50,
+        marginBottom:20
     },
     text: {
         textAlign: "center",
@@ -476,7 +483,6 @@ const styles = StyleSheet.create({
     content: {
         backgroundColor: '#1E2229',
         borderRadius: 20,
-        marginTop: 50,
         flexDirection: "column",
         padding: 15,
         marginLeft: 20,
@@ -611,7 +617,7 @@ const styles = StyleSheet.create({
     totalprice: {
         flexDirection: "column",
         marginRight: 20,
-        marginLeft:15
+        marginLeft: 15
 
     },
     totalpricetext: {
