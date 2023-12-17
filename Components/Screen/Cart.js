@@ -486,7 +486,8 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         padding: 15,
         marginLeft: 20,
-        marginRight: 20
+        marginRight: 20,
+        marginBottom:30
     },
     img: {
         width: '100%',
